@@ -1,4 +1,4 @@
-from stats import get_num_words, get_num_characters
+from stats import get_num_words, get_num_characters, make_dict_list
 
 def get_book_text(filepath):
     with open(filepath) as file:
@@ -8,9 +8,12 @@ def get_book_text(filepath):
 def main():
     book_text = get_book_text("./books/frankenstein.txt")
     # print(book_text)
-    words_number = get_num_words(book_text)
-    print(f"words in book {words_number}")
+    # words_number = get_num_words(book_text)
+    # print(f"words in book {words_number}")
     char_number = get_num_characters(book_text)
-    print(f"number of characters in text: {char_number}")
+    # print(f"number of characters in text: {char_number}")
+    dict_list = make_dict_list(char_number)
+    for entry in dict_list:
+        print(entry)
 
 main()

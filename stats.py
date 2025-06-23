@@ -13,3 +13,16 @@ def get_num_characters(text):
             else:
                 number_of_chars[char] = 1
     return number_of_chars
+
+def make_dict_list(char_dict):
+    char_list = []
+    for char in char_dict:
+        char_element = {"name": char, "num": char_dict[char]}
+        char_list.append(char_element)
+    return char_list
+
+def sort_on(char_dict):
+    return char_dict
+
+def sort_characters_dict(char_dict):
+    return char_dict
