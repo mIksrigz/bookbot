@@ -21,8 +21,10 @@ def make_dict_list(char_dict):
         char_list.append(char_element)
     return char_list
 
-def sort_on(char_dict):
-    return char_dict
+def sort_on(dict_list):
+    return dict_list["num"]
 
-def sort_characters_dict(char_dict):
-    return char_dict
+def sort_characters_dict_list(dict_list):
+    sorted_dict_list = dict_list
+    sorted_dict_list.sort(reverse=True, key=sort_on)
+    return sorted_dict_list
